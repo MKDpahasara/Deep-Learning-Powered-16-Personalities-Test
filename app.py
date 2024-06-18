@@ -89,10 +89,7 @@ questions = [
 # Dictionary to store responses
 responses = {}
 
-# Display the questions with radio buttons for responses in a horizontal layout
-#st.title("16 Personality Test Questionnaire")
 
-#st.title("16 Personality Test Questionnaire")
 
 for i, question in enumerate(questions):
     st.subheader(f"Q{i+1}. {question}")
@@ -133,7 +130,7 @@ if st.button("Submit"):
     predicted_class_index = np.argmax(prediction)
     
     
-    original_classes = range(0, 16)  # Assuming you have 13 classes
+    original_classes = range(0, 16)  # Assuming you have 16 classes
     predicted_class = original_classes[predicted_class_index]
     
     if predicted_class == 0:
@@ -187,7 +184,7 @@ if st.button("Submit"):
  
     # Display prediction
     st.write(f"### Predictrd Personality is {per}")
-    #st.write(f"The predicted output based on responses is: {per}")
+   
     st.write(f"{description}")
     
     
